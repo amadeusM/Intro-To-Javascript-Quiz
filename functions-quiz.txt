@@ -41,22 +41,25 @@ Create a function called buildTriangle()
 that will accept an input (the triangle at its widest width) and will build a triangle.
 
 Code:
+// creates a line of * for a given length
 function makeLine(length) {
-  var line = "";
-  for (var j = 1; j <= length; j++) {
-    line += "* "
-  }
-  return line + "\n";
+    var line = "";
+    for (var j = 1; j <= length; j++) {
+        line += "* ";
+    }
+    return line + "\n";
 }
 
-function buildTriangle(num){
-    var buildtriangle="";
-    for (var i=1;i<=num;i++){
-        var make=makeLine(i);
-        buildtriangle += make;
+// your code goes here.  Make sure you call makeLine() in your own code.
+function buildTriangle(height) {
+    var starTriangle = "";
+    for (var k = 1; k <= height; k++) {
+        starTriangle += makeLine(k);
     }
-    return buildtriangle;
+    return starTriangle;
 }
+
+// test your code by uncommenting the following line
 console.log(buildTriangle(10));
 
 Output:
